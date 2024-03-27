@@ -1,6 +1,11 @@
-function digitarValor(valor) {
-    const valorDisplay = document.getElementById("display");
-    valorDisplay.value = valorDisplay.value === "0" ? valor : valorDisplay.value + valor;
+function digitarValor(valor){
+    valorDisplay = document.getElementById("display");
+
+    if(valorDisplay.value == 0){
+        valorDisplay.value = valor;
+    } else {
+        valorDisplay.value += valor;
+    }
 }
 
 function imprimirMsg(texto) {
