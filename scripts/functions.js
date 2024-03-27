@@ -34,7 +34,22 @@ function zerar() {
     document.getElementById("display").value = "0";
 }
 
-function login() {
+function digitarValor(valor){
+    valorDisplay = document.getElementById("display");
+
+    if(valorDisplay.value == 0){
+        valorDisplay.value = valor;
+    } else {
+        valorDisplay.value += valor;
+    }
+}
+
+
+function imprimirMsg(texto){
+    alert('Vc clickou no botão ' + texto);
+}
+
+function login(){
     const emailCorreto = "luciano@gmail.com";
     const senhaCorreta = "senha";
     
@@ -55,3 +70,15 @@ function login() {
         alert("E-mail incorreto");
     }
 }
+
+    /*
+    if(email == emailCorreto && senha == senhaCorreta ){
+        alert("E-mail e senha corretos");
+    } else {
+        alert("E-mail ou senha incorretos.");
+    }
+
+    alert("E-mail digitado: " + email);
+    alert("Senha digitada: " + senha);
+*/
+
