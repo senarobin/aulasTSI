@@ -37,15 +37,20 @@ function zerar() {
 function login() {
     const emailCorreto = "luciano@gmail.com";
     const senhaCorreta = "senha";
+    
+    var email = document.getElementById("email").value;
+    var senha = document.getElementById("pwd").value;
 
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("pwd").value;
+    if(email == emailCorreto){        
+        if(senha == senhaCorreta){
 
-    if (email === emailCorreto && senha === senhaCorreta) {
-        alert("E-mail e senha corretos");
-        window.location.href = "../index.html";
-    } else if (email === emailCorreto) {
-        alert("Senha incorreta.");
+            alert("E-mail e senha corretos");
+            window.location.href = "../index.html";
+
+        } else {
+            alert("Senha incorreta.");
+        }
+
     } else {
         alert("E-mail incorreto");
     }
